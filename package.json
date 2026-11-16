@@ -1,0 +1,23 @@
+{
+  "name": "parcial-tp2---vallejos-adrian",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "dev": "nodemon index.js --ignore productos.json"
+  },
+  "keywords": [],
+  "author": "AV",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "dotenv": "^18.0.9",
+    "express": "^5.3.0",
+    "git": "^0.1.5",
+    "joi": "^18.3.1",
+    "mongodb": "^7.9.0",
+    "mongoose": "^9.12.1"
+  }
+}
