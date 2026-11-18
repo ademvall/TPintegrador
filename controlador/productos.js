@@ -3,8 +3,8 @@ import ServicioProductos from "../servicio/producto.js"
 class ControladorProductos {
     #servicio = null
 
-    constructor() {
-        this.#servicio = new ServicioProductos()
+    constructor(persistencia) {
+        this.#servicio = new ServicioProductos(persistencia)
     }
 
 
@@ -27,8 +27,8 @@ class ControladorProductos {
             if (Object.keys(producto).length == 0) throw new Error('El producto está vacío')
 
             const productoGuardado = await this.#servicio.guardarProducto(producto)
-            //res.json(productoGuardado)    
-            res.redirect('/')
+            res.json(productoGuardado)    
+            //res.redirect('/')
         }
         catch (error) {
             res.status(500).json({ url: req.url, method: req.method, error: error.message })

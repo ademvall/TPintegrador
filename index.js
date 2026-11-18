@@ -3,9 +3,7 @@ import config from './config.js'
 import CnxMongoDB from "./modelo/DAOs/CnxMongoDB.js";
 
 
-if(config.MODO_PERSISTENCIA == 'MONGO') {
-    await CnxMongoDB.conectar()
-}
 
-const server = new Server(config.PORT || 8080)
+
+const server = new Server(config.PORT || 8080, config.MODO_PERSISTENCIA)
 server.start()

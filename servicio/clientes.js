@@ -2,14 +2,13 @@ import ModelFactory from '../modelo/DAOs/clientes/clientesFactory.js'
 
 import Cliente from '../modelo/Cliente.js'
 
-import config from '../config.js'
 
 
 class Servicio {
     #modelo = null
 
-    constructor() {
-        this.#modelo = ModelFactory.get(config.MODO_PERSISTENCIA)
+    constructor(persistencia) {
+        this.#modelo = ModelFactory.get(persistencia)
     }
 
     obtenerClientes = async _ => {

@@ -4,8 +4,8 @@ import ControladorProductos from '../controlador/productos.js'
 class RouterProductos {
     #controlador = null
 
-    constructor() {
-        this.#controlador = new ControladorProductos()
+    constructor(persistencia) {
+        this.#controlador = new ControladorProductos(persistencia)
     }
 
     config() {

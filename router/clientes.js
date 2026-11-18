@@ -5,8 +5,8 @@ import Controlador from '../controlador/clientes.js'
 class Router {
     #controlador = null
 
-    constructor() {
-        this.#controlador = new Controlador()
+    constructor(persistencia) {
+        this.#controlador = new Controlador(persistencia)
     }
 
     config() {
